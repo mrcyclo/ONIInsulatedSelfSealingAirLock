@@ -15,6 +15,10 @@ namespace ONIInsulatedSelfSealingAirLock
         {
             // Valilla prefers prefix() for adding buildings
             //DoorHelpers.doorBuildMenu(InsulatedSelfSealingAirLockConfig.ID, InsulatedSelfSealingAirLockConfig.menu, InsulatedSelfSealingAirLockConfig.pred);
+
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.NAME", FormatAsLink("Insulated Self Sealing AirLock", InsulatedSelfSealingAirLockConfig.ID));
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.DESC", "The lowered thermal conductivity of insulated door block any liquid, gas and heat passing through them.");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.EFFECT", "Mantain liquid, gas and temperature between two rooms");
         }
 
         public static void Postfix()
@@ -85,23 +89,6 @@ namespace ONIInsulatedSelfSealingAirLock
             if (tech != null)
             {
                 tech.unlockedItemIDs.Add(door);
-            }
-        }
-    }
-
-
-    public class STRINGS
-    {
-        public class BUILDINGS
-        {
-            public class PREFABS
-            {
-                public class INSULATEDSELFSEALINGAIRLOCK
-                {
-                    public static LocString NAME = FormatAsLink("Insulated Self Sealing AirLock", InsulatedSelfSealingAirLockConfig.ID);
-                    public static LocString DESC = "The lowered thermal conductivity of insulated door block any liquid, gas and heat passing through them.";
-                    public static LocString EFFECT = "Mantain liquid, gas and temperature between two rooms";
-                }
             }
         }
     }

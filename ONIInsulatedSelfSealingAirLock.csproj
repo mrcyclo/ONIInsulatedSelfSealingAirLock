@@ -87,9 +87,6 @@
     <Compile Include="AnimFix_OnPrefabInit.cs" />
     <Compile Include="InsulatedSelfSealingAirLock.cs" />
     <Compile Include="InsulatedSelfSealingAirLockConfig.cs" />
-    <Compile Include="InsulatedSelfSealingAirLock_CleanUp.cs" />
-    <Compile Include="InsulatedSelfSealingAirLock_Closed.cs" />
-    <Compile Include="InsulatedSelfSealingAirLock_Opened.cs" />
     <Compile Include="InsulatedSelfSealingAirLock_SetSimState.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
