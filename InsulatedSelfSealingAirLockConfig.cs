@@ -1,31 +1,26 @@
-﻿using TUNING;
-using UnityEngine;
+﻿using UnityEngine;
+using TUNING;
 
 namespace ONIInsulatedSelfSealingAirLock
 {
     public class InsulatedSelfSealingAirLockConfig : IBuildingConfig
     {
         public const string ID = "InsulatedSelfSealingAirLock";
+
         // Which build menu to add to
         public const string menu = "Base";
+
         // Which item in build menu to add after
         public const string pred = "ManualPressureDoor";
+
         // Which tech tree entry to add to, "none" if no research is requried.
         public const string tech = "TemperatureModulation";
 
         public override BuildingDef CreateBuildingDef()
         {
-            string[] strArray = new string[1]
-            {
-                "Metal"
-            };
-            float[] construction_mass = new float[1]
-            {
-                BUILDINGS.CONSTRUCTION_MASS_KG.TIER3[0]
-            };
-            string[] construction_materials = strArray;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef("InsulatedSelfSealingAirLock", 1, 2, "Insulated_door_manual_kanim", 30, 60f, construction_mass, construction_materials, 1600f, BuildLocationRule.Tile, BUILDINGS.DECOR.PENALTY.TIER2, NOISE_POLLUTION.NONE, 1f);
-            buildingDef.ThermalConductivity = 0.01f;
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef("InsulatedSelfSealingAirLock", 1, 2, "Insulated_door_manual_kanim", 30, 60f, BUILDINGS.CONSTRUCTION_MASS_KG.TIER3, MATERIALS.ALL_METALS, 1600f, BuildLocationRule.Tile, BUILDINGS.DECOR.PENALTY.TIER2, NOISE_POLLUTION.NONE, 1f);
+            buildingDef.ThermalConductivity = 0f;
+            buildingDef.BaseMeltingPoint = 9999f;
             buildingDef.Overheatable = false;
             buildingDef.Floodable = false;
             buildingDef.Entombable = false;
@@ -64,6 +59,3 @@ namespace ONIInsulatedSelfSealingAirLock
         }
     }
 }
-
-
-
