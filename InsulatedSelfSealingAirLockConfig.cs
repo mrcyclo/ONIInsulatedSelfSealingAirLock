@@ -8,10 +8,10 @@ namespace ONIInsulatedSelfSealingAirLock
         public const string ID = "InsulatedSelfSealingAirLock";
 
         // Which build menu to add to
-        public const string menu = "Base";
+        public const string category = "Base";
 
-        // Which item in build menu to add after
-        public const string pred = "ManualPressureDoor";
+        // Which sub category in build menu to add to
+        public const string afterBuildingId = "ManualPressureDoor";
 
         // Which tech tree entry to add to, "none" if no research is requried.
         public const string tech = "TemperatureModulation";

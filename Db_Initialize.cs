@@ -28,13 +28,16 @@ namespace ONIInsulatedSelfSealingAirLock
             }
 
             // Add to build menu
-            var category = TUNING.BUILDINGS.PLANORDER.Find(x => x.category == InsulatedSelfSealingAirLockConfig.menu).buildingAndSubcategoryData;
-            var index = category.FindIndex(x => x.Key == InsulatedSelfSealingAirLockConfig.pred);
+            var category = TUNING.BUILDINGS.PLANORDER.Find(x => x.category == InsulatedSelfSealingAirLockConfig.category).buildingAndSubcategoryData;
+            var index = category.FindIndex(x => x.Key == InsulatedSelfSealingAirLockConfig.afterBuildingId);
             if (index != -1)
             {
                 category.Insert(index + 1, new KeyValuePair<string, string>(InsulatedSelfSealingAirLockConfig.ID, "uncategorized"));
                 Debug.Log("[InsulatedSelfSealingAirLock] Add door to build menu.");
             }
+
+            // Add to build menu, official ways, but item will be placed at last in the menu
+            //ModUtil.AddBuildingToPlanScreen(new HashedString(InsulatedSelfSealingAirLockConfig.category), InsulatedSelfSealingAirLockConfig.ID);
         }
     }
 }
