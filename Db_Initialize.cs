@@ -21,23 +21,15 @@ namespace ONIInsulatedSelfSealingAirLock
         {
             // Add to Tech tree
             var tech = Db.Get().Techs.TryGet(InsulatedSelfSealingAirLockConfig.tech);
-            if (tech != null)
-            {
-                tech.unlockedItemIDs.Add(InsulatedSelfSealingAirLockConfig.ID);
-                Debug.Log("[InsulatedSelfSealingAirLock] Add door to tech tree.");
-            }
+            tech?.unlockedItemIDs.Add(InsulatedSelfSealingAirLockConfig.ID);
 
             // Add to build menu
-            var category = TUNING.BUILDINGS.PLANORDER.Find(x => x.category == InsulatedSelfSealingAirLockConfig.category).buildingAndSubcategoryData;
-            var index = category.FindIndex(x => x.Key == InsulatedSelfSealingAirLockConfig.afterBuildingId);
-            if (index != -1)
-            {
-                category.Insert(index + 1, new KeyValuePair<string, string>(InsulatedSelfSealingAirLockConfig.ID, "uncategorized"));
-                Debug.Log("[InsulatedSelfSealingAirLock] Add door to build menu.");
-            }
-
-            // Add to build menu, official ways, but item will be placed at last in the menu
-            //ModUtil.AddBuildingToPlanScreen(new HashedString(InsulatedSelfSealingAirLockConfig.category), InsulatedSelfSealingAirLockConfig.ID);
+            ModUtil.AddBuildingToPlanScreen(
+                new HashedString(InsulatedSelfSealingAirLockConfig.category),
+                InsulatedSelfSealingAirLockConfig.ID,
+                "doors",
+                InsulatedSelfSealingAirLockConfig.afterBuildingId
+            );
         }
     }
 }
