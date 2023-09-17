@@ -14,17 +14,18 @@ namespace ONIInsulatedSelfSealingAirLock
 
             for (int i = 0; i < cells.Count; i++)
             {
-                int num = cells[i];
+                int cell = cells[i];
 
-                SimMessages.SetInsulation(num, 0f);
+                SimMessages.SetInsulation(cell, 0f);
 
-                if (__instance.CurrentState == Door.ControlState.Opened)
+                Door.ControlState controlState = Traverse.Create(__instance).Field("controlState").GetValue<Door.ControlState>();
+                if (controlState != Door.ControlState.Opened)
                 {
-                    SimMessages.ClearCellProperties(num, 7);
+                    SimMessages.SetCellProperties(cell, 7);
                 }
                 else
                 {
-                    SimMessages.SetCellProperties(num, 7);
+                    SimMessages.ClearCellProperties(cell, 7);
                 }
             }
         }

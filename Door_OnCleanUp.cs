@@ -7,9 +7,9 @@ namespace ONIInsulatedSelfSealingAirLock
     {
         public static void Prefix(Door __instance)
         {
-            foreach (int num in __instance.building.PlacementCells)
+            foreach (int cell in __instance.building.PlacementCells)
             {
-                SimMessages.ClearCellProperties(num, 7);
+                SimMessages.ClearCellProperties(cell, 7);
             }
         }
     }
