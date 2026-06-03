@@ -11,8 +11,8 @@ namespace ONIInsulatedSelfSealingAirLock
         public static void Prefix()
         {
             Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.NAME", STRINGS.UI.FormatAsLink("Insulated Self Sealing AirLock", InsulatedSelfSealingAirLockConfig.ID));
-            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.DESC", "The lowered thermal conductivity of insulated door block any liquid, gas and heat passing through them.");
-            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.EFFECT", "Mantain liquid, gas and temperature between two rooms");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.DESC", "The lowered thermal conductivity of this insulated door blocks any liquid, gas, or heat passing through it.");
+            Strings.Add("STRINGS.BUILDINGS.PREFABS.INSULATEDSELFSEALINGAIRLOCK.EFFECT", "Mantains liquid, gas, and temperature between two rooms.");
 
             Debug.Log("[InsulatedSelfSealingAirLock] Add new string.");
         }
