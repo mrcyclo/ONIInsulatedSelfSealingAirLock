@@ -26,7 +26,7 @@ namespace ONIInsulatedSelfSealingAirLock
                 }
                 else
                 {
-                    // Allow transmisstion when set to Open
+                    // Allow transmission when set to Open
                     SimMessages.ClearCellProperties(cell, 7);
                 }
             }
