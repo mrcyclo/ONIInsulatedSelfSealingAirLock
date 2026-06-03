@@ -21,10 +21,12 @@ namespace ONIInsulatedSelfSealingAirLock
                 Door.ControlState controlState = Traverse.Create(__instance).Field("controlState").GetValue<Door.ControlState>();
                 if (controlState != Door.ControlState.Opened)
                 {
+                    // GasImpermeable (1), LiquidImpermeable (2), SolidImpermeable (4)
                     SimMessages.SetCellProperties(cell, 7);
                 }
                 else
                 {
+                    // Allow transmisstion when set to Open
                     SimMessages.ClearCellProperties(cell, 7);
                 }
             }
