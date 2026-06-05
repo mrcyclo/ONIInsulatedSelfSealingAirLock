@@ -54,6 +54,7 @@ namespace ONIInsulatedSelfSealingAirLock
 
         public override void DoPostConfigureComplete(GameObject go)
         {
+            Debug.Log("[InsulatedSelfSealingAirLock] PostConfig");
             go.GetComponent<AccessControl>().controlEnabled = true;
             go.GetComponent<KBatchedAnimController>().initialAnim = "closed";
         }
