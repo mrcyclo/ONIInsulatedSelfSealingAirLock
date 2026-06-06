@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ONIInsulatedSelfSealingAirLock</RootNamespace>
     <AssemblyName>ONIInsulatedSelfSealingAirLock</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -86,9 +86,12 @@
   <ItemGroup>
     <Compile Include="AnimFix_OnPrefabInit.cs" />
     <Compile Include="Db_Initialize.cs" />
+    <Compile Include="Door_ApplyControlState.cs" />
     <Compile Include="Door_OnCleanUp.cs" />
+    <Compile Include="Door_OnSpawn.cs" />
     <Compile Include="Door_SetSimState.cs" />
     <Compile Include="InsulatedSelfSealingAirLockConfig.cs" />
+    <Compile Include="InsulatedSelfSealingAirLockSimState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
