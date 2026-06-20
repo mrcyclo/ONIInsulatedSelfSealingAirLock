@@ -84,9 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimFix_OnPrefabInit.cs" />
     <Compile Include="Db_Initialize.cs" />
-    <Compile Include="Door_ApplyControlState.cs" />
     <Compile Include="Door_OnCleanUp.cs" />
     <Compile Include="Door_OnSpawn.cs" />
     <Compile Include="Door_SetSimState.cs" />
