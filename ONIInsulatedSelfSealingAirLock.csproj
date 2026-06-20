@@ -86,7 +86,9 @@
   <ItemGroup>
     <Compile Include="Db_Initialize.cs" />
     <Compile Include="Door_OnCleanUp.cs" />
+    <Compile Include="Door_OnPrefabInit.cs" />
     <Compile Include="Door_OnSpawn.cs" />
+    <Compile Include="InsulatedSelfSealingAirLockWorkerAnims.cs" />
     <Compile Include="Door_SetSimState.cs" />
     <Compile Include="InsulatedSelfSealingAirLockConfig.cs" />
     <Compile Include="InsulatedSelfSealingAirLockSimState.cs" />

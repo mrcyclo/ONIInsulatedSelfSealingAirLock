@@ -2,16 +2,15 @@ using HarmonyLib;
 
 namespace ONIInsulatedSelfSealingAirLock
 {
-    // Re-apply sealed sim state after OnSpawn grid setup.
-    [HarmonyPatch(typeof(Door), "OnSpawn")]
-    public class Door_OnSpawn
+    // Must run after Door.OnPrefabInit, which can assign a null static overrideAnims array.
+    [HarmonyPatch(typeof(Door), "OnPrefabInit")]
+    internal class Door_OnPrefabInit
     {
         public static void Postfix(Door __instance)
         {
             if (__instance.PrefabID() != InsulatedSelfSealingAirLockConfig.ID) return;
 
             InsulatedSelfSealingAirLockWorkerAnims.Apply(__instance);
-            InsulatedSelfSealingAirLockSimState.Apply(__instance, __instance.building.PlacementCells);
         }
     }
 }
