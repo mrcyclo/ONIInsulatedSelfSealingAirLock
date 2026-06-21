@@ -10,7 +10,6 @@ namespace ONIInsulatedSelfSealingAirLock
         {
             if (__instance.PrefabID() != InsulatedSelfSealingAirLockConfig.ID) return;
 
-            InsulatedSelfSealingAirLockWorkerAnims.Apply(__instance);
             InsulatedSelfSealingAirLockSimState.Apply(__instance, __instance.building.PlacementCells);
         }
     }
